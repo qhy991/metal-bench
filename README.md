@@ -9,6 +9,9 @@ The mathematical oracle and candidate comparator have **no Cake dependency**. Ca
 exports ordinary MSL through a small packaging adapter; native candidates use the
 same manifest, oracle and Metal runner. The CPU path checks the harness, not GPU support.
 
+See [the development/evaluation workflow](docs/WORKFLOW.md) for Compiler feedback,
+reference access and how to keep the two experiments separate.
+
 ## CPU checks
 
 Python 3.10+ standard library only. Write reports to new directories outside Git.
