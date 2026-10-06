@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "kind": "msl",
+  "task": "rmsnorm_fp32",
+  "variants": {
+    "r1-c32": {"source": "rmsnorm.metal", "entry": "rmsnorm", "threads": 32, "parameters": true},
+    "r3-c257": {"source": "rmsnorm.metal", "entry": "rmsnorm", "threads": 32, "parameters": true},
+    "r128-c1024": {"source": "rmsnorm.metal", "entry": "rmsnorm", "threads": 32, "parameters": true}
+  }
+}

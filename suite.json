@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "suite_id": "metal-bench-development-v0.1",
+  "scope": "public integration/development suite; not held-out evaluation",
+  "target": {"device_name": "Apple M4", "family": "apple9"},
+  "tasks": [{"id": "rmsnorm_fp32", "definition": "tasks/rmsnorm_fp32/task.json"}],
+  "timing": {"samples": 30, "dispatches_per_sample": 64, "warmup_buffers": 3, "statistic": "arithmetic_mean", "reset": "same resident input buffers; no cache flush; three warmup buffers", "scope": "amortized GPU command-buffer interval; not framework end-to-end"},
+  "token_policy": "record only; no token limit"
+}

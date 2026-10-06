@@ -1,0 +1,16 @@
+{
+  "id": "rmsnorm_fp32",
+  "split": "development",
+  "source": "original mathematical task specification; no third-party task data",
+  "semantics": "out[r,c] = x[r,c] * (mean_j(x[r,j]^2) + epsilon)^(-1/2) * weight[c]",
+  "dtype": "fp32",
+  "layout": "row-major contiguous",
+  "epsilon": 0.00001,
+  "atol": 0.00002,
+  "rtol": 0.00002,
+  "workloads": [{"id": "r1-c32", "rows": 1, "columns": 32}, {"id": "r3-c257", "rows": 3, "columns": 257}, {"id": "r128-c1024", "rows": 128, "columns": 1024}],
+  "distributions": ["uniform", "zeros", "near_zero", "alternating", "mixed_magnitude"],
+  "seeds": [101, 307],
+  "oracle": "independent Python float64 fsum, comparison after FP32 input/output rounding; no Cake imports",
+  "input_mutation": "forbidden"
+}
