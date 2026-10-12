@@ -1,5 +1,14 @@
 # metal-bench
 
+## GitHub Project tracking
+
+For newly authorized qhy991-managed work, follow the canonical
+[agent tracking policy](https://github.com/users/qhy991/projects/1) in the
+Project README. Read it before task work and perform its checkpoint updates
+through the authenticated GitHub CLI/API. This binding adds tracking metadata
+only; the repository's existing issue, lifecycle, resource, privacy and
+acceptance rules retain their authority.
+
 The benchmark owns task semantics, oracle, tolerances and measurement. Candidates
 may use Cake or native Metal, but the evaluator must not import open_cake_ir, its
 Verifier, its task oracle, Lab or provider modules. The suite remains usable without Cake.
